@@ -8,7 +8,7 @@ import Reservation from "./Components/Reservation";
 
 function App() {
   return (
-    <div className="App bg-primary">
+    <div className="App bg-primary ">
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Restaurant />} />

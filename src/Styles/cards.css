@@ -34,3 +34,6 @@ width */
   background: #d9534f;
   border-radius: 0.5rem;
 }
+* {
+  font-family: "Nunito Sans";
+}

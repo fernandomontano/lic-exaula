@@ -5,8 +5,8 @@ import "../Styles/cards.css";
 export default function Menu() {
   return (
     <div className="bg-primary">
-      <div className="bg-primary px-5">
-        <h3 className="mt-5 pt-5 px-sm-5 text-warning">
+      <div className="bg-primary">
+        <h3 className="mt-5 pt-5 px-5 text-warning">
           Opciones de Sushi
           <div className="line mt-2"></div>
         </h3>

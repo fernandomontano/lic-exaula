@@ -18,8 +18,8 @@
 img {
   object-fit: cover;
 }
-
-/* width */
+/* 
+width */
 ::-webkit-scrollbar {
   width: 10px;
 }

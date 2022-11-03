@@ -1,11 +1,22 @@
-import { useState } from "react";
 import Restaurant from "./Components/Restaurant";
+import { Routes, Route } from "react-router-dom";
 import "./Styles/bootstrap.min.css";
+import Header from "./Components/Header";
+import Gallery from "./Components/Gallery";
+import Menu from "./Components/Menu";
+import Reservation from "./Components/Reservation";
 
 function App() {
   return (
-    <div className="App bg-primary min-vh-100 overflow-hidden">
-      <Restaurant />
+    <div className="App bg-primary">
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<Restaurant />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="menu" element={<Menu />} />
+          <Route path="reservation" element={<Reservation />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

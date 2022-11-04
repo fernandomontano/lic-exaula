@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../Styles/seating.css";
 import "../Styles/bootstrap.min.css";
 import Modal from "./Modal";
+import json from "../assets/seats.json";
 
 export default function Reservation() {
   const [count, setCount] = useState(0);
   const [selected, setSelected] = useState([]);
   const [status, setStatus] = useState(false);
-
-  console.log(selected);
-
-  console.log(status);
 
   useEffect(() => {
     for (let el of selected) {
@@ -21,7 +18,7 @@ export default function Reservation() {
     setStatus(false);
   }, [status]);
 
-  const handleClick = (e) => {
+  const handleClick = (e, prop) => {
     if (
       e.target.classList.contains("sun-solid") &&
       e.target.classList.contains("icon") &&
@@ -75,21 +72,17 @@ export default function Reservation() {
       >
         <div className="container p-4">
           <div className="row">
-            <div className="col">
-              <div className="sun-solid icon"></div>
-            </div>
-            <div className="col">
-              <div className="sun-solid icon occupied"></div>
-            </div>
-            <div className="col-4">
-              <div className="sun-solid icon "></div>
-            </div>
-            <div className="col">
-              <div className="sun-solid icon"></div>
-            </div>
-            <div className="col">
-              <div className="sun-solid icon "></div>
-            </div>
+            {json.main.firstRow.map(({ key, status }) => {
+              return (
+                <div className="col" key={key}>
+                  <div
+                    className={`sun-solid icon ${
+                      !status.includes("occupied") || "occupied"
+                    }`}
+                  ></div>
+                </div>
+              );
+            })}
           </div>
         </div>
 

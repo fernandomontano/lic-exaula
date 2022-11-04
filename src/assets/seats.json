@@ -1,28 +1,33 @@
 {
-  "principales": {
-    "first-row": [
+  "main": {
+    "firstRow": [
       {
+        "key": "A01",
         "status": "available",
         "reservedBy": ""
       },
       {
+        "key": "A02",
         "status": "available",
         "reservedBy": ""
       },
       {
+        "key": "A03",
+        "status": "occupied",
+        "reservedBy": ""
+      },
+      {
+        "key": "A04",
         "status": "available",
         "reservedBy": ""
       },
       {
-        "status": "available",
-        "reservedBy": ""
-      },
-      {
+        "key": "A05",
         "status": "available",
         "reservedBy": ""
       }
     ],
-    "second-row": [
+    "secondRow": [
       {
         "status": "available",
         "reservedBy": ""
@@ -46,7 +51,7 @@
     ]
   },
   "sushi": {
-    "first-row": [],
-    "second-row": []
+    "firstRow": [],
+    "secondRow": []
   }
 }

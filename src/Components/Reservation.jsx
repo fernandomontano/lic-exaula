@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/seating.css";
 import "../Styles/bootstrap.min.css";
 import Modal from "./Modal";
 
 export default function Reservation() {
   const [count, setCount] = useState(0);
+  const [selected, setSelected] = useState([]);
+  const [status, setStatus] = useState(false);
 
-  console.log(count);
+  console.log(selected);
+
+  console.log(status);
+
+  useEffect(() => {
+    for (let el of selected) {
+      el.classList.add("occupied");
+      el.classList.toggle("selected");
+      selected.splice(selected.indexOf(el), 1);
+    }
+    setStatus(false);
+  }, [status]);
 
   const handleClick = (e) => {
     if (
@@ -16,7 +29,7 @@ export default function Reservation() {
       !e.target.classList.contains("selected")
     ) {
       e.target.classList.add("selected");
-
+      selected.push(e.target);
       setCount(count + 1);
     } else if (
       e.target.classList.contains("sun-solid") &&
@@ -25,6 +38,7 @@ export default function Reservation() {
     ) {
       e.target.classList.toggle("selected");
       setCount(count - 1);
+      selected.splice(selected.indexOf(e.target), 1);
     }
   };
 
@@ -140,13 +154,15 @@ export default function Reservation() {
           </div>
         </div>
       </section>
-      <div className="d-flex justify-content-center ">
-        <Modal />
+      <div className="d-flex flex-column">
+        <div className="d-flex justify-content-center ">
+          <Modal status={setStatus} />
+        </div>
+        <p className="lighter text d-block mt-5 ">
+          Usted ha seleccionado <span>{count}</span> mesas, {count * 8} asientos
+          por el precio de $<span>{count * 10}</span>
+        </p>
       </div>
-      <p className="lighter text ">
-        Usted ha seleccionado <span>{count}</span> asientos por el precio de $
-        <span>{count * 10}</span>
-      </p>
     </div>
   );
 }

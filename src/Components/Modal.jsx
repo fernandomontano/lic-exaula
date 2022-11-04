@@ -1,13 +1,16 @@
 import React, { useRef, useState } from "react";
 import "../Styles/dates.css";
+import jsonData from "../assets/seats.json";
 
-export default function Modal() {
+export default function Modal({ status }) {
   const [name, setName] = useState(null);
-
   const username = useRef(null);
+
+  console.log(jsonData);
 
   const getResult = () => {
     setName(username.current.value);
+    status(true);
   };
   return (
     <div>
@@ -62,12 +65,6 @@ export default function Modal() {
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
-              >
-                Cerrar
-              </button>
-              <button
-                type="button"
-                className="btn btn-primary"
                 onClick={getResult}
               >
                 Aceptar

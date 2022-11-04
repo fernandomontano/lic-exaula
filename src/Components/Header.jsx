@@ -46,7 +46,11 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="reservation" className="nav-link" href="./pages/seats.html">
+                  <Link
+                    to="reservation"
+                    className="nav-link"
+                    href="./pages/seats.html"
+                  >
                     Reservar mesa
                   </Link>
                 </li>

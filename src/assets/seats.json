@@ -1,0 +1,52 @@
+{
+  "principales": {
+    "first-row": [
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      }
+    ],
+    "second-row": [
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      },
+      {
+        "status": "available",
+        "reservedBy": ""
+      }
+    ]
+  },
+  "sushi": {
+    "first-row": [],
+    "second-row": []
+  }
+}

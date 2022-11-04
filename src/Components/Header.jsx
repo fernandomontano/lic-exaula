@@ -54,6 +54,24 @@ export default function Header() {
                     Reservar mesa
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link
+                    to="developers"
+                    className="nav-link"
+                    href="./pages/developers.html"
+                  >
+                    Desarrolladores
+                  </Link>
+                  </li>
+                  <li className="nav-item">
+                  <Link
+                    to="contacts"
+                    className="nav-link"
+                    href="./pages/contacts.html"
+                  >
+                    Contáctanos
+                  </Link>
+                  </li>
               </ul>
             </div>
           </div>

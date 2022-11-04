@@ -1,13 +1,11 @@
 import React, { useRef, useState } from "react";
 import "../Styles/dates.css";
 
-export default function Modal({ status }) {
-  const [name, setName] = useState(null);
+export default function Modal({ status, name }) {
   const username = useRef(null);
 
-
   const getResult = () => {
-    setName(username.current.value);
+    name(username.current.value);
     status(true);
   };
   return (
@@ -47,6 +45,7 @@ export default function Modal({ status }) {
                 <h5 className="lighter">Tu nombre completo:</h5>
                 <div className="d-flex-inline input-group">
                   <input
+                    required
                     ref={username}
                     id="reservationName"
                     type="text"
@@ -60,7 +59,7 @@ export default function Modal({ status }) {
             </div>
             <div className="modal-footer">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
                 onClick={getResult}

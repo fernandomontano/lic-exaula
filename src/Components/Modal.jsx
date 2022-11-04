@@ -1,12 +1,19 @@
 import React, { useRef, useState } from "react";
 import "../Styles/dates.css";
+import swal from "sweetalert";
 
-export default function Modal({ status, name }) {
+export default function Modal({ status, name, price }) {
   const username = useRef(null);
 
   const getResult = () => {
     name(username.current.value);
     status(true);
+    swal({
+      title: "¡Gracias!",
+      text: `Has reservado ${price / 10} mesas por $${price}`,
+      icon: "success",
+      button: ":D",
+    });
   };
   return (
     <div>

@@ -96,7 +96,7 @@
       },
       {
         "seat": "A18",
-        "isAvailable": false,
+        "isAvailable": true,
         "reservedBy": ""
       },
       {

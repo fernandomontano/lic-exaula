@@ -6,6 +6,7 @@ import Gallery from "./Components/Gallery";
 import Menu from "./Components/Menu";
 import Reservation from "./Components/Reservation";
 import Developers from "./Components/Developers";
+import Contacts from "./Components/Contacts";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="menu" element={<Menu />} />
           <Route path="reservation" element={<Reservation />} />
           <Route path="developers" element={<Developers />} />
-          <Route path="reservation" element={<Reservation />} />
+          <Route path="contacts" element={<Contacts />} />
         </Route>
       </Routes>
     </div>

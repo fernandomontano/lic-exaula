@@ -146,7 +146,7 @@ export default function Reservation() {
       </section>
       <div className="d-flex flex-column">
         <div className="d-flex justify-content-center align-items-center flex-column ">
-          <Modal status={setStatus} name={setName} />
+          <Modal status={setStatus} name={setName} price={count * 10} />
           <div className="lighter mt-1">
             Usted ha seleccionado <span>{count}</span> mesas, {count * 8}{" "}
             asientos por el precio de $<span>{count * 10}</span>

@@ -1,10 +1,58 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 export default function Contacts() {
   return (
     <div className="mt-5 pt-5">
       <div className="mt-3">
-        <div className="text-info text-center">Selecciona tu mesa</div>
+        <h2 className="text-center text-secondary"><b>¡Mantengamónos en contacto!</b></h2>
+      <div className=" d-flex text-center justify-content-around px-3 text-danger mt-5">
+        <div>
+        <h3 className="text-warning text-center mb-5">Teléfonos</h3>
+        <FontAwesomeIcon icon={faPhone} size="5x"/>
+        <h6 className="mt-4 text-light">Haz tus pedidos:</h6>
+        <p className="mt-4 text-light">+503 1234 5678</p>
+        </div>
+        <div className="content-justify-center text-center">
+        <h3 className="text-warning text-center mb-5">Dirección</h3>
+        <FontAwesomeIcon icon={faMapMarkerAlt} size="5x"/>
+        <h6 className="mt-4 text-light">Antiguo Cuscatlán frente</h6>
+        <h6 className="mt-2 text-light">a Universidad Don Bosco</h6>
+        </div>
+        <div>
+        <h3 className="text-warning text-center mb-5">Correos</h3>
+        <FontAwesomeIcon icon={faEnvelope} size="5x"/>
+        <h6 className="mt-4 text-light">sushiitoto@gmail.com</h6>
+        </div>
+        <div>
+        <h3 className="text-warning text-center mb-5">Redes</h3>
+        <FontAwesomeIcon icon={faFacebook} size="3x"/>
+        <h6 className="mt-4 mb-4 text-light">Sushiito sv</h6>
+        <FontAwesomeIcon icon={faTwitter} size="3x px-2"/>
+        <FontAwesomeIcon icon={faInstagram} size="3x"/>
+        <h6 className="mt-4 mb-4 text-light">@sushiitosv</h6>
+        </div>
+      {/*<h3 className="text-info text-center mb-5">Teléfonos</h3>
+      <h3 className="text-info text-center mb-5">Dirección</h3>
+      <h3 className="text-info text-center mb-5">Correos</h3>
+      </div>
+        <div className=" d-flex justify-content-around px-2">
+          <FontAwesomeIcon icon={faPhone} size="5x"/>
+          <FontAwesomeIcon icon={faMapMarkerAlt} size="5x"/>
+          <FontAwesomeIcon icon={faEnvelope} size="5x"/>
+          </div>
+          <div className=" d-flex justify-content-around mt-3 px-5">
+            <p>+503 1234 5678</p>
+            <p >Antiguo Cuscatlán frente a
+Universidad Don Bosco</p>
+  <p>sushiitoto@gmail.com</p>*/}
+          </div>
       </div>
     </div>
   );

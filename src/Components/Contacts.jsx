@@ -14,7 +14,7 @@ export default function Contacts() {
         <h2 className="text-center text-secondary"><b>¡Mantengamónos en contacto!</b></h2>
       <div className=" d-flex text-center justify-content-around px-3 text-danger mt-5">
         <div>
-        <h3 className="text-warning text-center mb-5">Teléfonos</h3>
+        <h3 className="text-warning text-center mb-5">Teléfono</h3>
         <FontAwesomeIcon icon={faPhone} size="5x"/>
         <h6 className="mt-4 text-light">Haz tus pedidos:</h6>
         <p className="mt-4 text-light">+503 1234 5678</p>
@@ -26,7 +26,7 @@ export default function Contacts() {
         <h6 className="mt-2 text-light">a Universidad Don Bosco</h6>
         </div>
         <div>
-        <h3 className="text-warning text-center mb-5">Correos</h3>
+        <h3 className="text-warning text-center mb-5">Correo</h3>
         <FontAwesomeIcon icon={faEnvelope} size="5x"/>
         <h6 className="mt-4 text-light">sushiitoto@gmail.com</h6>
         </div>
@@ -38,20 +38,6 @@ export default function Contacts() {
         <FontAwesomeIcon icon={faInstagram} size="3x"/>
         <h6 className="mt-4 mb-4 text-light">@sushiitosv</h6>
         </div>
-      {/*<h3 className="text-info text-center mb-5">Teléfonos</h3>
-      <h3 className="text-info text-center mb-5">Dirección</h3>
-      <h3 className="text-info text-center mb-5">Correos</h3>
-      </div>
-        <div className=" d-flex justify-content-around px-2">
-          <FontAwesomeIcon icon={faPhone} size="5x"/>
-          <FontAwesomeIcon icon={faMapMarkerAlt} size="5x"/>
-          <FontAwesomeIcon icon={faEnvelope} size="5x"/>
-          </div>
-          <div className=" d-flex justify-content-around mt-3 px-5">
-            <p>+503 1234 5678</p>
-            <p >Antiguo Cuscatlán frente a
-Universidad Don Bosco</p>
-  <p>sushiitoto@gmail.com</p>*/}
           </div>
       </div>
     </div>

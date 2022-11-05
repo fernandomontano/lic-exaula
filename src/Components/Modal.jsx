@@ -9,10 +9,10 @@ export default function Modal({ status, name, price }) {
     name(username.current.value);
     status(true);
     swal({
-      title: "¡Gracias!",
-      text: `Has reservado ${price / 10} mesas por $${price}`,
+      title: "Reservación exitosa",
+      text: `Has reservado ${price / 10} mesas por $${price} ¡Te esperamos!`,
       icon: "success",
-      button: ":D",
+      button: "Aceptar",
     });
   };
   return (

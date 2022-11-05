@@ -33,10 +33,10 @@ export default function Contacts() {
         <div>
         <h3 className="text-warning text-center mb-5">Redes</h3>
         <FontAwesomeIcon icon={faFacebook} size="3x"/>
-        <h6 className="mt-4 mb-4 text-light">Sushiito sv</h6>
+        <h6 className="mt-4 mb-4 text-light">Sushiitoto sv</h6>
         <FontAwesomeIcon icon={faTwitter} size="3x px-2"/>
         <FontAwesomeIcon icon={faInstagram} size="3x"/>
-        <h6 className="mt-4 mb-4 text-light">@sushiitosv</h6>
+        <h6 className="mt-4 mb-4 text-light">@sushiitotosv</h6>
         </div>
           </div>
       </div>

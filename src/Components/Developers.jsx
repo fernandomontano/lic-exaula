@@ -41,7 +41,7 @@ export default function Developers() {
             />
             <div className="card-block text-center">
               <h5 className="card-title mt-4 text-warning p-1">
-                Luciana Mungia
+                Luciana Munguia
               </h5>
               <p className="card-text">Developer & Designer</p>
               <h6 className="card-text  p-2">

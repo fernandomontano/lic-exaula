@@ -12,7 +12,7 @@ export default function Contacts() {
     <div className="mt-5 pt-5">
       <div className="mt-3">
         <h2 className="text-center text-secondary"><b>¡Mantengamónos en contacto!</b></h2>
-      <div className=" d-flex text-center justify-content-around px-3 text-danger mt-5">
+      <div className=" d-flex text-center flex-wrap justify-content-around px-3 text-danger mt-5">
         <div>
         <h3 className="text-warning text-center mb-5">Teléfono</h3>
         <FontAwesomeIcon icon={faPhone} size="5x"/>

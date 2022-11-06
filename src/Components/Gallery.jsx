@@ -110,9 +110,15 @@ export default function Gallery() {
       </div>
       <div className="mt-5 d-flex flex-column d-md-none justify-content-center align-content-center">
         <img src={img} alt="" className="py-2 rounded" />
+        <h1 className="text-secondary">Recepcion</h1>
         <img src={img2} alt="" className="py-2 rounded" />
+        <h1 className="text-secondary">Principales</h1>
+
         <img src={img3} alt="" className="py-2 rounded" />
+        <h1 className="text-secondary">Bar de Sushi</h1>
+
         <img src={img4} alt="" className="py-2 rounded" />
+        <h1 className="text-secondary">Terraza</h1>
       </div>
     </div>
   );

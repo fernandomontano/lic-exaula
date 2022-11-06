@@ -7,6 +7,7 @@ import Home from "./components/Home.jsx";
 import Prubea from "./components/apprueba.jsx";
 import Historial from "./components/Historial.jsx";
 import ContactUs from "./components/ContactUs.jsx";
+import './styles/bootstrap.min.css';
 
 
 

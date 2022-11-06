@@ -78,10 +78,10 @@ const handleClick = () => {
         <option value="BRL">BRL</option>
         <option value="RUB">RUB</option>
       </select>
-      <input type="number" className="block mt-5" ref={input}></input>
+      <input type="number" step="0.01"min="0.01"class="form-control" ref={input}></input>
       </div>
       <div className="col">
-      <select name="" id="" ref={to}>
+      <select  name="" id="" ref={to}>
       <option value="MXN">MXN</option>
       <option value="USD">USD</option>
         <option value="EUR">EUR</option>
@@ -95,10 +95,10 @@ const handleClick = () => {
         <option value="BRL">BRL</option>
         <option value="RUB">RUB</option>
       </select>
-      <input type="number" className="block mt-5" disabled value={result}></input>
+      <input type="number"  class="form-control" id="disabledInput" disabled value={result}></input>
       </div>
       </div>
-      <button className="mt-5" onClick={handleClick}>
+      <button className="btn btn-secondary" onClick={handleClick}>
         Convertir
       </button>
       <div>

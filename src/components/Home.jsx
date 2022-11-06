@@ -25,22 +25,26 @@ Calcule tipos de cambio de divisas y de intercambio extranjero, realice sus cál
 </section>
 <section>
     <h2>Monedas para convertir</h2>
-    <li>Dólar americano - USD</li>
-    <li>Euro - EUR</li>
-  <li>Libra esterlina - GBP</li>
-  <li>Franco suizo - CHF</li>
-  <li>Yen japonés - JPY</li>
-  <li>Dólar hongkonés - HKD</li>
-  <li>Dólar canadiense - CAD</li>
-  <li>Yuan chino - CNY</li>
-  <li>Dólar australiano - AUD</li>
-  <li>Real brasileño - BRL</li>
-  <li>Rublo ruso - RUB</li>
-  <li>Peso mexicano - MXN</li>
-
+    <div class="w-25 ps-5" >
+    <ul  class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">Dólar americano - USD</li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Euro - EUR</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Libra esterlina - GBP</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Franco suizo - CHF</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Yen japonés - JPY</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Dólar hongkonés - HKD</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Dólar canadiense - CAD</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Yuan chino - CNY</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Dólar australiano - AUD</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Real brasileño - BRL</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Rublo ruso - RUB</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">Peso mexicano - MXN</li>
+</ul>
+</div>
 
 </section>
-<button className='btn btn-info'>Vamo a convertir monedas</button>
+<button className='btn btn-primary'>Vamo a convertir monedas</button>
+
     </div>
   )
 }

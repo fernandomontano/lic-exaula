@@ -5,8 +5,8 @@ import { Outlet, Link } from "react-router-dom";
 export default function Header() {
   return (
     <div>
-      <header className=" px-sm-5 mb-5 w-100 bg-dark" >
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <header className=" px-sm-5 mb-5 w-100 bg-primary" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
   <Link to="/" className="navbar-brand" href="#">
   <a class="navbar-brand" href="#">Conversor de Divisas</a>
   </Link> 

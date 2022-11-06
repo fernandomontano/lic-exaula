@@ -32,6 +32,11 @@ export default function Header() {
         </Link>
       </li>
       <li class="nav-item active">
+      <Link to="historial" className="nav-link">
+        <a class="nav-link" href="#">Historial</a>
+        </Link>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="#">Desarrolladores</a>
       </li>
       <li class="nav-item active">

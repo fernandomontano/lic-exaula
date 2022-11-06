@@ -5,6 +5,7 @@ import Conversor from "./components/Conversor.jsx";
 import ElementA from "./components/ElementA.jsx";
 import Home from "./components/Home.jsx";
 import Prubea from "./components/apprueba.jsx";
+import Historial from "./components/Historial.jsx";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="conversor" element={<Conversor/>}></Route>
           <Route path="home" element={<Home/>}> </Route>
           <Route path="prueba" element={<Prubea/>}></Route>
+          <Route path="historial" element={<Historial/>}></Route>
         </Route>
       </Routes>
       <div>

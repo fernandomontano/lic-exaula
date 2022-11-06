@@ -9,19 +9,44 @@ export default function Conversor({ }) {
   const input = useRef(null);
   const from = useRef(null);
   const to = useRef(null);
+  const currency = [["USD", 1], ["JPY", 146.62], ["MXN", 19.52]];
 
-  const handleClick = () => {
+
+
+var select1, select2;
+const [result, setResult] = useState();
+
+const handleClick = () => {
     const first = from.current.value;
     const second = to.current.value;
+    currency.forEach(element=>{
+      if(element[0]==first){
+        select1 = element;
+      }
+      if(element[0]==second){
+        select2 = element;
+      }
 
-    if (first === second) {
-      alert("Papi tenes los mismos");
+    });
+    var dollar;
+    var resultTemp;
+    if (select1[0] != 'USD' && select2[0] !='USD'){ //SI NINGUNA ES DOLAR (MONEDA BASE)
+      dollar = input.current.value / select1[1];
+      setResult(dollar * select2[1]) ;
+  }
+  else{
+    if (select1[0] == 'USD'){ // Dolar a otra moneda
+        setResult(input.current.value * select2[1]) ;
+        //  43986  =  300 * 146.62
     }
-    if (first === "USD" && second === "MXN") {
-      setConvertir(input.current.value * 19.52);
-    }
-    setDestino(second);
-  };
+    else{ //Otra moneda a dolar
+        setResult(input.current.value / select1[1]) ;
+        //   8.18    1200 / 146.62
+    } 
+  }
+
+
+};
 
   const handleChange = () => {
     const first = from.current.value;
@@ -70,15 +95,16 @@ export default function Conversor({ }) {
         <option value="BRL">BRL</option>
         <option value="RUB">RUB</option>
       </select>
-      <input type="number" className="block mt-5" disabled value={convertir}></input>
+      <input type="number" className="block mt-5" disabled value={result}></input>
       </div>
       </div>
       <button className="mt-5" onClick={handleClick}>
         Convertir
       </button>
       <div>
-        {convertir} {destino}
+        {result} {destino}
       </div>
+
     </div>
   );
 }

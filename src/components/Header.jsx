@@ -27,20 +27,15 @@ export default function Header() {
         </Link>
       </li>
       <li class="nav-item active">
-      <Link to="prueba" className="nav-link">
-        <a class="nav-link" href="#">Prueba</a>
-        </Link>
-      </li>
-      <li class="nav-item active">
-      <Link to="historial" className="nav-link">
-        <a class="nav-link" href="#">Historial</a>
-        </Link>
+        <a class="nav-link" href="#">Historial</a>      
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Desarrolladores</a>
       </li>
       <li class="nav-item active">
+        <Link to="contactus" className="nav-link">
         <a class="nav-link" href="#">Contáctanos</a>
+        </Link>
       </li>
     </ul>
   </div>

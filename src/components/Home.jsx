@@ -1,5 +1,7 @@
 import React from 'react'
-import image from "../assets/Imagen 1.jpg"
+import image from "../assets/imagenHome.jpg"
+import image2 from "../assets/Imagen2Home.jpg"
+
 export default function Home() {
   return (
     <div>
@@ -17,7 +19,7 @@ Calcule tipos de cambio de divisas y de intercambio extranjero, realice sus cál
 <section>
     <h2>Cómo utilizarlo</h2>
     <div className="card" style={{ width: "18rem" }}>
-<img src={image} className="card-img-top" alt="..." />
+<img src={image2} className="card-img-top" alt="..." />
 </div>
     <p>Selecciona la moneda que deseas convertir (la moneda que poseas o de la cual deseas conocer su valor), e ingresa la cantidad de dicha moneda, luego selecciona la segunda moneda, que será a la cual se convertirá la moneda base seleccionada, presiona el botón convertir y podrás conocer la conversión deseada.</p>
 </section>

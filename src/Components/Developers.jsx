@@ -11,7 +11,7 @@ export default function Developers() {
     <div className="mt-5 pt-5">
       <div className="mt-3">
         <div className="d-flex justify-content-around p-0 px-sm-5 mx-5 flex-wrap">
-        <div
+          <div
             className="card mt-5 pt-5 rounded bg-dark lighter"
             style={{ width: "20rem" }}
           >
@@ -25,9 +25,7 @@ export default function Developers() {
                 Ivania Lebrón
               </h5>
               <p className="card-text">Developer & Designer</p>
-              <h6 className="card-text  p-2">
-                El Salvador, San Salvador
-              </h6>
+              <h6 className="card-text  p-2">El Salvador, San Salvador</h6>
             </div>
           </div>
           <div
@@ -44,9 +42,7 @@ export default function Developers() {
                 Luciana Munguía
               </h5>
               <p className="card-text">Developer & Designer</p>
-              <h6 className="card-text  p-2">
-                El Salvador, San Salvador
-              </h6>
+              <h6 className="card-text  p-2">El Salvador, San Salvador</h6>
             </div>
           </div>
           <div
@@ -63,14 +59,12 @@ export default function Developers() {
                 Andrea Velásquez
               </h5>
               <p className="card-text">Developer & Designer</p>
-              <h6 className="card-text  p-2">
-                El Salvador, San Salvador
-              </h6>
+              <h6 className="card-text  p-2">El Salvador, San Salvador</h6>
             </div>
           </div>
         </div>
         <div className="d-flex justify-content-around p-0 px-sm-5 mx-5 mt-4 flex-wrap">
-        <div
+          <div
             className="card mt-5 pt-5 rounded bg-dark lighter"
             style={{ width: "20rem" }}
           >
@@ -84,9 +78,7 @@ export default function Developers() {
                 Giovana Anaya
               </h5>
               <p className="card-text">Developer & Designer</p>
-              <h6 className="card-text  p-2">
-                El Salvador, San Salvador
-              </h6>
+              <h6 className="card-text  p-2">El Salvador, San Salvador</h6>
             </div>
           </div>
           <div
@@ -103,9 +95,7 @@ export default function Developers() {
                 Fernando Montano
               </h5>
               <p className="card-text">Developer & Designer</p>
-              <h6 className="card-text  p-2">
-                El Salvador, Santa Ana
-              </h6>
+              <h6 className="card-text  p-2">El Salvador, Santa Ana</h6>
             </div>
           </div>
         </div>

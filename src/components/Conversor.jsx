@@ -6,6 +6,7 @@ export default function Conversor({ history }) {
   // const [valor, setValor] = useState("valor inicial")
   const [convertir, setConvertir] = useState();
   const [destino, setDestino] = useState();
+  const [response, setResponse] = useState();
   const input = useRef(null);
   const from = useRef(null);
   const to = useRef(null);
@@ -48,8 +49,16 @@ export default function Conversor({ history }) {
     }
   };
 
+  const fetchApi = async () => {
+    const url = `https://data.fixer.io/api/convert?access_key=Sd8Zs7athcDPCCgzp9TZ89DfVvCxTEMq&from=${from.current.value}&to=${to.current.value}&amount=${input.current.value}`;
+    const response = await fetch(url);
+    const json = await response.json();
+    setResponse(json);
+  };
+  console.log(response);
   useEffect(() => {
     if (!result) return;
+    fetchApi();
     history.push([
       [from.current.value, input.current.value],
       [to.current.value, result],

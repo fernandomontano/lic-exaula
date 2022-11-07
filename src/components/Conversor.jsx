@@ -64,8 +64,9 @@ const handleClick = () => {
     <div className="container">
       <div className="row">
         <div className="col">
-      <select name="" id="" ref={from} onChange={handleChange}>
-        <option value="USD">USD</option>
+      <div class="input-group mb-3">
+      <span class="input-group-text">  <select className="form-select"name="" id="" ref={from} onChange={handleChange}>
+        <option  value="USD">USD</option>
         <option value="MXN">MXN</option>
         <option value="EUR">EUR</option>
         <option value="GBP">GBP</option>
@@ -77,11 +78,17 @@ const handleClick = () => {
         <option value="AUD">AUD</option>
         <option value="BRL">BRL</option>
         <option value="RUB">RUB</option>
-      </select>
-      <input type="number" step="0.01"min="0.01"class="form-control" ref={input}></input>
+      </select></span>
+      <input type="number" step="0.01"min="0.01"className="form-control" aria-describedby="button-addon2" placeholder="Ingresa la cantidad..." ref={input} ></input>
+      <button className="btn btn-success" type="button" id="button-addon2" onClick={handleClick}>
+        Convertir
+      </button>
+    </div>  
+
       </div>
       <div className="col">
-      <select  name="" id="" ref={to}>
+      <div class="input-group mb-3">
+      <span class="input-group-text">   <select className="form-select" name="" id="" ref={to}>
       <option value="MXN">MXN</option>
       <option value="USD">USD</option>
         <option value="EUR">EUR</option>
@@ -94,17 +101,18 @@ const handleClick = () => {
         <option value="AUD">AUD</option>
         <option value="BRL">BRL</option>
         <option value="RUB">RUB</option>
-      </select>
+      </select> 
+      </span>
       <input type="number"  class="form-control" id="disabledInput" disabled value={result}></input>
+    </div>
+       
       </div>
+      <div class="alert alert-dismissible alert-warning">
+ 
+  <h4 class="alert-heading">Recuerda</h4>
+  <p class="mb-0">Tenemos acceso directo a las tasas de cambio en tiempo real, por lo que puede estar seguro de que los datos que proporcionamos son siempre precisos y fiables.</p>
+</div>  
       </div>
-      <button className="btn btn-secondary" onClick={handleClick}>
-        Convertir
-      </button>
-      <div>
-        {result} {destino}
-      </div>
-
     </div>
   );
 }

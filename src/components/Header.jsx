@@ -5,7 +5,7 @@ import "../Styles/bootstrap.min.css";
 export default function Header() {
   return (
     <div>
-      <header className="px-sm-5 mb-5 w-100 bg-primary">
+      <header className="px-sm-5 w-100 bg-primary">
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary ">
           <Link to="/" className="navbar-brand" href="#">
             <b>CONVERSOR DE DIVISAS</b>

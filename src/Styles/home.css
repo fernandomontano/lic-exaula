@@ -1,0 +1,12 @@
+.responsive-width {
+  width: 25%;
+}
+@media (max-width: 776px) {
+  .responsive-width {
+    width: 100%;
+  }
+  .center-card {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

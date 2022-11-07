@@ -1,9 +1,8 @@
 import React from "react";
-import TableData from "./form";
 
 export default function Historial({ history }) {
   return (
-    <div>
+    <div className="mt-4">
       <div className="App">
         <table className="table">
           <thead>

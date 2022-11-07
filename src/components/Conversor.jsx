@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Conversor.css";
 
 export default function Conversor({ history }) {
   const [count, setCount] = useState(0);
@@ -38,7 +37,7 @@ export default function Conversor({ history }) {
 
   // html & css.
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row">
         <div className="col">
           <div className="input-group mb-3">

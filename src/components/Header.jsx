@@ -8,7 +8,7 @@ export default function Header() {
       <header className=" px-sm-5 mb-5 w-100 bg-primary" >
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
   <Link to="/" className="navbar-brand" href="#">
-  <a class="navbar-brand" href="#">Conversor de Divisas</a>
+  <a class="navbar-brand" href="#"><b>CONVERSOR DE DIVISAS</b></a>
   </Link> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

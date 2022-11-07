@@ -7,29 +7,38 @@ import Home from "./components/Home.jsx";
 import Prubea from "./components/apprueba.jsx";
 import Historial from "./components/Historial.jsx";
 import ContactUs from "./components/ContactUs.jsx";
-import './styles/bootstrap.min.css';
-
-
+import "./styles/bootstrap.min.css";
+import React, { useState } from "react";
+import History from "./components/History";
 
 function App() {
   // codigo
+  const [history, setHistory] = useState([]);
 
   // html
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <Routes>
         <Route path="/" element={<Header />}>
-        <Route index element={<Home/>}></Route>
-          <Route path="conversor" element={<Conversor/>}></Route>
-          <Route path="home" element={<Home/>}> </Route>
-          <Route path="prueba" element={<Prubea/>}></Route>
-          <Route path="historial" element={<Historial/>}></Route>
-          <Route path="contactus" element={<ContactUs/>}></Route>
+          <Route index element={<Home />}></Route>
+          <Route
+            path="conversor"
+            element={<Conversor history={history} />}
+          ></Route>
+          <Route path="home" element={<Home />}>
+            {" "}
+          </Route>
+          <Route path="prueba" element={<Prubea />}></Route>
+          <Route
+            path="historial"
+            element={<Historial history={history} />}
+          ></Route>
+          <Route path="contactus" element={<ContactUs />}></Route>
         </Route>
       </Routes>
       <div>
-        <Outlet/>
-              </div>
+        <Outlet />
+      </div>
     </div>
   );
 }

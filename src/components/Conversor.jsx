@@ -2,68 +2,28 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Conversor.css";
 
 export default function Conversor({ history }) {
-  // javascript
-  // const [valor, setValor] = useState("valor inicial")
-  const [convertir, setConvertir] = useState();
-  const [destino, setDestino] = useState();
-  const [response, setResponse] = useState();
+  const [count, setCount] = useState(0);
   const input = useRef(null);
   const from = useRef(null);
   const to = useRef(null);
-  const currency = [
-    ["USD", 1],
-    ["JPY", 146.62],
-    ["MXN", 19.52],
-  ];
 
-  var select1, select2;
   const [result, setResult] = useState();
 
-  const handleClick = () => {
-    const first = from.current.value;
-    const second = to.current.value;
-    currency.forEach((element) => {
-      if (element[0] == first) {
-        select1 = element;
-      }
-      if (element[0] == second) {
-        select2 = element;
-      }
-    });
-    var dollar;
-    var resultTemp;
-    if (select1[0] != "USD" && select2[0] != "USD") {
-      //SI NINGUNA ES DOLAR (MONEDA BASE)
-      dollar = input.current.value / select1[1];
-      setResult(dollar * select2[1]);
-    } else {
-      if (select1[0] == "USD") {
-        // Dolar a otra moneda
-        setResult(input.current.value * select2[1]);
-        //  43986  =  300 * 146.62
-      } else {
-        //Otra moneda a dolar
-        setResult(input.current.value / select1[1]);
-        //   8.18    1200 / 146.62
-      }
-    }
-  };
-
   const fetchApi = async () => {
-    const url = `https://data.fixer.io/api/convert?access_key=Sd8Zs7athcDPCCgzp9TZ89DfVvCxTEMq&from=${from.current.value}&to=${to.current.value}&amount=${input.current.value}`;
+    if (!from.current.value || !input.current.value) return;
+    const url = `https://api.getgeoapi.com/v2/currency/convert?api_key=27b748b9578bbe2cc74bf5e35b7a962e3c0a8ff6&from=${from.current.value}&to=${to.current.value}&amount=${input.current.value}&format=json`;
     const response = await fetch(url);
     const json = await response.json();
-    setResponse(json);
-  };
-  console.log(response);
-  useEffect(() => {
-    if (!result) return;
-    fetchApi();
+    setResult(json.rates[to.current.value].rate_for_amount);
     history.push([
       [from.current.value, input.current.value],
-      [to.current.value, result],
+      [to.current.value, json.rates[to.current.value].rate_for_amount],
     ]);
-  }, [result]);
+  };
+
+  useEffect(() => {
+    fetchApi();
+  }, [count]);
 
   const handleChange = () => {
     const first = from.current.value;
@@ -118,7 +78,7 @@ export default function Conversor({ history }) {
               className="btn btn-success"
               type="button"
               id="button-addon2"
-              onClick={handleClick}
+              onClick={() => setCount(count + 1)}
             >
               Convertir
             </button>
@@ -149,7 +109,6 @@ export default function Conversor({ history }) {
               id="disabledInput"
               disabled
               value={result || "0.00"}
-              onChange={() => console.log("Di resultado nuevo")}
             ></input>
           </div>
         </div>

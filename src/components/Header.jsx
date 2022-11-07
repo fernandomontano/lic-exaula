@@ -35,7 +35,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item active">
-                <Link to="desarrolladores" className="nav-link">
+                <Link to="Desarrolladores" className="nav-link">
                   Desarrolladores
                 </Link>
               </li>
